@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html,
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+.container {
+	margin: 3rem 0;
+	background-color: #fcf0f8;
+}
+.sec-container {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 6rem;
+}
+.sec-container > div h2 {
+	margin-top: 3rem;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.sec-container > div p {
+	margin: 2rem 0;
+	color: gray;
+}
+.sec-container > div a {
+	color: #3adc30;
+	text-decoration: none;
+}
+
+.beneContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 4rem;
+}
+
+.bene {
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+	margin: 1rem;
+}
+
+.beneImgs {
+	display: grid;
+	grid-gap: 0.5rem;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1fr);
+}
+
+.EachbeneImgs {
+	border-radius: 1rem;
+}
+
+.beneImgDiv {
+	position: relative;
+}
+.beneImgDiv p {
+	color: #fffefe;
+	font-size: 16px;
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	right: 2rem;
+}
