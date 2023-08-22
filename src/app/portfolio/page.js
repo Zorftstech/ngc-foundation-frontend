@@ -13,9 +13,9 @@ const page = () => {
       >Our Works</Heading>
 
       <Flex textAlign={'start'} py='2rem' flexDir={'column'} px='2rem'>
-        <Text mb={'1rem'}>Our targets are children in the very rural community in Nigeria, children who have little or nothing to eat and limited access to basic amenities. we are able to achieve our projects through consistent communication with community leaders, our community manager and other managers spend a lot of time going to these communities to source for beneficiaries as well. We have been able to make a tremendous impact in rural communities.</Text>
+        <Text mb={'1rem'} fontWeight={'400'} color='#888'>Our targets are children in the very rural community in Nigeria, children who have little or nothing to eat and limited access to basic amenities. we are able to achieve our projects through consistent communication with community leaders, our community manager and other managers spend a lot of time going to these communities to source for beneficiaries as well. We have been able to make a tremendous impact in rural communities.</Text>
 
-        <Text>Some of our projects that have been carried out over the years.</Text>
+        <Text fontWeight={'400'} color='#888'>Some of our projects that have been carried out over the years.</Text>
 
         <Flex justify={'center'} align='center' flexDir={'column'} gap='2rem'>
           <div className="container">

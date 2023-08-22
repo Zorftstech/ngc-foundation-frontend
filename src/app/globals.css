@@ -77,7 +77,7 @@ a {
 .box__a, .box__b, .img__wrapper-a, .img__wrapper-b {
   width: 50%;
   height: 400px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
