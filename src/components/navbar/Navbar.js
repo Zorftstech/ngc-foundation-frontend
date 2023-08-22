@@ -53,7 +53,7 @@ export default function Navbar() {
   return (
     <>
       <Box px={4}>
-        < Container maxW={1170}>
+        <Container Container maxW={1170}>
           <Flex padding={'10px 0'} h={'70px'} alignItems={'center'} justifyContent={'space-between'}>
             <IconButton
               size={'md'}
