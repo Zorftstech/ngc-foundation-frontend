@@ -11,6 +11,7 @@ const Students = () => {
 			<h2 className="bene">Beneficiaries</h2>
 			<div className="beneImgs">
 				<div className="beneImgDiv">
+					<div className="overview"></div>
 					<Image
 						className="EachbeneImgs"
 						src={PinkGirl}
@@ -22,6 +23,7 @@ const Students = () => {
 					</p>
 				</div>
 				<div className="beneImgDiv">
+				<div className="overview"></div>
 					<Image
 						className="EachbeneImgs"
 						src={BlueStudents}
@@ -33,6 +35,7 @@ const Students = () => {
 					</p>
 				</div>
 				<div className="beneImgDiv">
+					<div className="overview"></div>
 					<Image
 						className="EachbeneImgs"
 						src={PurpleStudent}
