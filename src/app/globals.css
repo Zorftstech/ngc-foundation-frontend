@@ -23,3 +23,79 @@ a {
 .banner{
   background-image: url('../assets/banner.png');
 }
+
+.container {  
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Box-A Box-B"
+    "Box-A Box-C";
+
+    margin-top: 2rem;
+}
+.Box-A, .Box-B, .Box-C {
+  width: 600px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+
+
+  color: #fff;
+  position: relative;
+  font-weight: 600;
+}
+.text-content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.Box-A { 
+  grid-area: Box-A; 
+  background:  url('../assets/portfolio/box-a.svg'), linear-gradient(rgba(1, 1, 1, 0.40), rgba(0, 0, 0, .5));
+  height: 420px;
+}
+
+.Box-B { 
+  grid-area: Box-B; 
+  background: url('../assets/portfolio/box-b.svg') rgba(0, 0, 0, 0.60);
+  height: 200px;
+}
+
+.Box-C { 
+  grid-area: Box-C; 
+  background: url('../assets/portfolio/box-c.svg') rgba(0, 0, 0, 0.60);
+  height: 200px;
+}
+
+
+.box__a, .box__b, .img__wrapper-a, .img__wrapper-b {
+  width: 50%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+.box__a {
+  background: url('../assets/portfolio/imgA.svg') rgba(0, 0, 0, 0.60);
+}
+.box__b {
+  background: url('../assets/portfolio/imgB.svg') rgba(0, 0, 0, 0.60);
+}
+
+.img__wrapper-a {
+  background: url('../assets/portfolio/imageA.svg') rgba(0, 0, 0, 0.60);
+} 
+.img__wrapper-b {
+  background: url('../assets/portfolio/imageB.svg') rgba(0, 0, 0, 0.60);
+}
