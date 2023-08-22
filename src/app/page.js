@@ -1,14 +1,13 @@
 import Image from "next/image";
-import HeroBanner from "@/components/HeroBanner";
-import AboutSection from "@/components/AboutSection";
 import Beneficiaries from "@/components/Beneficiaries";
-import Students from "@/components/Students";
+import { AboutSection, Campaign, HeroBanner, Students } from "@/components";
 
 export default function Home() {
 	return (
 		<main>
 			<HeroBanner />
 			<AboutSection />
+			<Campaign />
 			<Beneficiaries />
 			<Students />
 		</main>
