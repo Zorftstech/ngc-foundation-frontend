@@ -24,9 +24,11 @@ import Image from 'next/image'
 import XButton from '../tags/XButton'
 
 const Links = ['About us', 'Our works', 'FAQs', 'Donate']
+const Navigate = ['about us', 'portfolio', 'faqs', 'donate']
 
-const NavLink = (props) => {
-  const { children } = props
+const NavLink = ({link, index}) => {
+  // const { children, index } = props
+  console.log(index)
 
   return (
     <Box
@@ -41,8 +43,9 @@ const NavLink = (props) => {
         textDecoration: 'none',
         color: '#3ADC30'
       }}
-      href={'#'}>
-      {children}
+      href={Navigate[index]}
+      >
+      {link}
     </Box>
   )
 }
@@ -55,23 +58,25 @@ export default function Navbar() {
       <Box px={4}>
         <Container Container maxW={1170}>
           <Flex padding={'10px 0'} h={'70px'} alignItems={'center'} justifyContent={'space-between'}>
-            <IconButton
-              size={'md'}
-              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-              aria-label={'Open Menu'}
-              display={{ md: 'none' }}
-              onClick={isOpen ? onClose : onOpen}
-            />
             <HStack spacing={8} alignItems={'center'}>
               <Image src={Logo} alt='logo'/>
             </HStack>
 
+            <IconButton
+              size={'lg'}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={8}/>}
+              aria-label={'Open Menu'}
+              display={{ md: 'none' }}
+              onClick={isOpen ? onClose : onOpen}
+              bg={"transparent"}
+            />
+
               <HStack as={'nav'} spacing={20} display={{ base: 'none', md: 'flex' }}>
                 {Links.map((link, i, links) => {
                   if(links.length - 1 === i){
-                     return <XButton title={link}/>
+                     return <XButton title={link} />
                   }else{
-                    return <NavLink key={link}>{link}</NavLink>
+                    return <NavLink key={link} index={i} link={link}/>
                   }
                 })}
               </HStack>
