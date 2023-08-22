@@ -33,10 +33,11 @@ body {
 }
 
 .beneContainer {
+	max-width: 1170px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 4rem;
+	margin: 5rem auto;
 }
 
 .bene {
@@ -48,7 +49,7 @@ body {
 
 .beneImgs {
 	display: grid;
-	grid-gap: 0.5rem;
+	grid-gap: 1rem;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(1fr);
 }
@@ -67,4 +68,16 @@ body {
 	bottom: 1rem;
 	left: 1rem;
 	right: 2rem;
+	z-index: 4;
+}
+
+.overview{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	border-radius: 1rem;
 }

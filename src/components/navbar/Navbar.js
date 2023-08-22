@@ -55,16 +55,18 @@ export default function Navbar() {
       <Box px={4}>
         < Container maxW={1170}>
           <Flex padding={'10px 0'} h={'70px'} alignItems={'center'} justifyContent={'space-between'}>
-            <IconButton
-              size={'md'}
-              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-              aria-label={'Open Menu'}
-              display={{ md: 'none' }}
-              onClick={isOpen ? onClose : onOpen}
-            />
             <HStack spacing={8} alignItems={'center'}>
               <Image src={Logo} alt='logo'/>
             </HStack>
+
+            <IconButton
+              size={'lg'}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={8}/>}
+              aria-label={'Open Menu'}
+              display={{ md: 'none' }}
+              onClick={isOpen ? onClose : onOpen}
+              bg={"transparent"}
+            />
 
               <HStack as={'nav'} spacing={20} display={{ base: 'none', md: 'flex' }}>
                 {Links.map((link, i, links) => {

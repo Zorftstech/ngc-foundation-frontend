@@ -17,13 +17,13 @@ export default function HeroBanner() {
         justify={'center'}
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={'linear(to-r, rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61))'}>
-        <Stack maxW={'80%'} align={'center'} spacing={6}>
+        <Stack maxW={{base: '90%', md: '80%'}} align={'center'} spacing={6}>
           <Text
             textAlign={'center'}
             color={'white'}
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: '3xl', md: '60px' })}>
+            fontSize={useBreakpointValue({ base: '30px', md: '60px' })}>
             Creating real  <span style={{color: '#D60A87'}}>impact</span> in rural communities.
           </Text>
           <Stack direction={'row'}>

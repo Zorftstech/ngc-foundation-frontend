@@ -20,12 +20,12 @@ import XButton from './tags/XButton'
 
 const AboutSection = () => {
   return (
-    <Container maxW={'1170px'} p="12">
-      <Heading fontSize={'46px'} textAlign={'center'} as="h1">About us</Heading>
+    <Container maxW={'1170px'} p={10}>
+      <Heading fontSize={{base: '28px', md: '46px'}} textAlign={'center'} as="h1">About us</Heading>
       <Box
         marginTop={{ base: '1', sm: '5' }}
         display="flex"
-        flexDirection={{ base: 'column', sm: 'row' }}
+        flexDirection={{ base: 'column', md: 'row' }}
         gap={'0px'}>
         <Box
           display="flex"
@@ -33,14 +33,15 @@ const AboutSection = () => {
           position="relative"
           alignItems="center">
           <Box
-            width={{ base: '100%', sm: '85%' }}
+            width={{ base: '100%', md: '85%' }}
             zIndex="2"
-            marginLeft={{ base: '0', sm: '5%' }}
+            marginLeft={{ base: '0', md: '5%' }}
             marginTop="5%">
             <Box textDecoration="none" _hover={{ textDecoration: 'none' }}>
               <Image
                 src={AboutusImg}
                 alt="some good alt text"
+                width={'100%'}
                 style={{
                   objectFit: 'cover',
                   borderRadius: '20px'
@@ -50,13 +51,15 @@ const AboutSection = () => {
           </Box>
         </Box>
         <Box
-        marginLeft={'-30px'}
+        marginLeft={{base: 0, md: '-30px'}}
           display="flex"
           flex="1"
           flexDirection="column"
+          alignItems={{base: 'center'}}
           justifyContent="center"
-          marginTop={{ base: '3', sm: '0' }}>
+          marginTop={{ base: 10, md: '0' }}>
           <Text
+            noOfLines={4}
             as="p"
             marginTop="2"
             color={'#888888'}
@@ -66,6 +69,7 @@ const AboutSection = () => {
           <br />
           <br />
           <Text
+            noOfLines={4}
             as="p"
             marginTop="13px"
             mb={'15px'}
