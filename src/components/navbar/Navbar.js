@@ -24,9 +24,11 @@ import Image from 'next/image'
 import XButton from '../tags/XButton'
 
 const Links = ['About us', 'Our works', 'FAQs', 'Donate']
+const Navigate = ['about us', 'portfolio', 'faqs', 'donate']
 
-const NavLink = (props) => {
-  const { children } = props
+const NavLink = ({link, index}) => {
+  // const { children, index } = props
+  console.log(index)
 
   return (
     <Box
@@ -41,8 +43,9 @@ const NavLink = (props) => {
         textDecoration: 'none',
         color: '#3ADC30'
       }}
-      href={'#'}>
-      {children}
+      href={Navigate[index]}
+      >
+      {link}
     </Box>
   )
 }
@@ -71,9 +74,9 @@ export default function Navbar() {
               <HStack as={'nav'} spacing={20} display={{ base: 'none', md: 'flex' }}>
                 {Links.map((link, i, links) => {
                   if(links.length - 1 === i){
-                     return <XButton title={link}/>
+                     return <XButton title={link} />
                   }else{
-                    return <NavLink key={link}>{link}</NavLink>
+                    return <NavLink key={link} index={i} link={link}/>
                   }
                 })}
               </HStack>
