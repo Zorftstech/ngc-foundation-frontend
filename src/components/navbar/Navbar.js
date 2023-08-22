@@ -24,7 +24,7 @@ import Image from 'next/image'
 import XButton from '../tags/XButton'
 
 const Links = ['About us', 'Our works', 'FAQs', 'Donate']
-const Navigate = ['about us', 'portfolio', 'faqs', 'donate']
+const Navigate = ['about', 'portfolio', 'faqs', 'donate']
 
 const NavLink = ({link, index}) => {
   // const { children, index } = props
@@ -58,7 +58,7 @@ export default function Navbar() {
       <Box px={4}>
         < Container maxW={1170}>
           <Flex padding={'10px 0'} h={'70px'} alignItems={'center'} justifyContent={'space-between'}>
-            <HStack spacing={8} alignItems={'center'}>
+            <HStack as={'a'} href='/' spacing={8} alignItems={'center'}>
               <Image src={Logo} alt='logo'/>
             </HStack>
 

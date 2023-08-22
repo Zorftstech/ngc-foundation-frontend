@@ -11,15 +11,15 @@ import {
   Input,
   Stack,
 	Box,
-  Image,
 	LinkBox,
 } from '@chakra-ui/react'
 import WomenImage from "../assets/WomenImage.png";
 import Link from 'next/link'
+import Image from 'next/image';
 
 export default function SplitScreen() {
   return (
-    <Stack mt={50} minH={'80vh'} direction={{ base: 'column', md: 'row' }} bg={'#D507860F'}>
+    <Stack mt={50} minH={'60vh'} direction={{ base: 'column', md: 'row' }} bg={'#D507860F'}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={4} w={'full'} maxW={'2xl'}>
 					<Box>
@@ -39,6 +39,7 @@ export default function SplitScreen() {
 
       <Flex flex={1}>
         <Image
+        style={{objectFit: 'cover'}}
           alt={'Login Image'}
           src={WomenImage}
         />
