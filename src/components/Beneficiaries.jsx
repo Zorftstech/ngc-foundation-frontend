@@ -23,7 +23,7 @@ export default function SplitScreen() {
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={4} w={'full'} maxW={'2xl'}>
 					<Box>
-	 					<Heading as={'h3'} fontSize={'36px'}>
+	 					<Heading as={'h3'} fontSize={{base: '28px', md: '36px'}}>
 	 						See how we are making a difference in our<br/>
 	 						community.
 	 					</Heading>
@@ -37,7 +37,7 @@ export default function SplitScreen() {
         </Stack>
       </Flex>
 
-      <Flex flex={1}>
+      <Flex flex={1} px={{base: '20px'}}>
         <Image
         style={{objectFit: 'cover'}}
           alt={'Login Image'}
