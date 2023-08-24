@@ -1,24 +1,16 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { children } from '@/assets/donate'
-import { Flex } from '@chakra-ui/layout'
-import Modal from './modal'
-// import { Input } from '@chakra-ui/react'
+import { Flex, Heading, Text } from '@chakra-ui/layout'
+import { ModalBody, useDisclosure } from '@chakra-ui/react'
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton } from '@chakra-ui/react';
+// import { Modak } from 'next/font/google'
 
 const page = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const openModal = () => {
-    setModalOpen(true)
-  }
-  const closeModal = () => {
-    setModalOpen(false)
-  }
-
-  const handleOpenModalClick = () => {
-    openModal
-  }
   return (
     <div style={{ position: 'relative' }} >
       <Flex my='2rem' py={'2rem'} 
@@ -39,17 +31,32 @@ const page = () => {
             <option>Pounds</option>
           </select>
 
-          <button className='donate-btn' onClick={handleOpenModalClick}>Donate</button>
+          <button className='donate-btn' onClick={onOpen}>Donate</button>
         </div>
       </Flex>
 
-      <Modal open={modalOpen} onClose={closeModal}>
-        <div className='modal-content'>
-          <h1>Modal here!</h1>
-        </div>
+      <Modal onClose={onClose} isOpen={isOpen} isCentered p='1.5rem 2rem'>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader textAlign={'center'}>Bank Transfer</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody py='1.5rem'>
+            <Text fontSize={'16px'} fontWeight='400'> Account Name</Text>
+            <Heading fontSize={'28px'} fontWeight='700' mb='2.5rem'>Ngozi children foundation</Heading>
+
+            <Text fontSize={'16px'} fontWeight='400'>Account Number</Text>
+            <Heading fontSize={'28px'} fontWeight='700' mb='2.5rem'>1012351571</Heading>
+
+            <Text fontSize={'16px'} fontWeight='400'>Bank Name</Text>
+            <Heading fontSize={'28px'} fontWeight='700' mb='1.5rem'>Keystone Bank</Heading>
+
+            <Link href='/success' className='donate-link' >Done</Link>
+          </ModalBody>
+          
+        </ModalContent>
       </Modal>
     </div>
   )
 }
 
-export default page
+export default page;

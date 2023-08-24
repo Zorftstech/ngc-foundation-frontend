@@ -185,6 +185,17 @@ select {
 
   width: 100%;
 }
+.donate-link {
+  background-color: #3ADC30;
+  color: #fff;
+  border-radius: 30px;
+  padding: 18px 30px;
+  cursor: pointer;
+  align-self: center;
+  text-align: center;
+
+  width: 100%;
+}
 
 @media (max-width: 992px) {
   .container {  
