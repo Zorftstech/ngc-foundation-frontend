@@ -13,7 +13,7 @@ const BeneficialCard = ({arr, item, index}) => {
         }} zIndex={'1'}></Box>
         <CardFooter position={'relative'} zIndex={3}>
           <Stack width={'full'}>
-            <Text textAlign={'left'} color={'#fff'} fontSize={'16px'}>{item}</Text>
+            <Text textAlign={'left'} color={'#fff'} fontSize={'16px'} fontWeight='600'>{item}</Text>
           </Stack>
         </CardFooter>
   </Card>

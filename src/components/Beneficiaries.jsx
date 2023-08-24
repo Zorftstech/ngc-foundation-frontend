@@ -17,7 +17,7 @@ import WomenImage from "../assets/WomenImage.png";
 import Link from 'next/link'
 import Image from 'next/image';
 
-export default function SplitScreen() {
+export default function Beneficiaries () {
   return (
     <Stack mt={50} minH={'60vh'} direction={{ base: 'column', md: 'row' }} bg={'#D507860F'}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>

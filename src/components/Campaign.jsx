@@ -19,7 +19,7 @@ import {
   Input,
   Container
 } from '@chakra-ui/react'
-import { FaCheckCircle } from 'react-icons/fa'
+// import { FaCheckCircle } from 'react-icons/fa'
 import CamCards from './Cards'
 
 import React, { useRef, useState } from 'react';

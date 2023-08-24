@@ -36,8 +36,8 @@ export default function Partners() {
           <Heading>A digital Product design agency</Heading>
           <Stack
             spacing={4}>
-              <Input p={'20px 10px'} rounded={'20px'} placeholder='full name' type='text'/>
-              <Input p={'20px 10px'} rounded={'20px'} placeholder='email address' type='text'/>
+              <Input p={'20px 10px'} rounded={'20px'} variant='filled' placeholder='full name' type='text'/>
+              <Input p={'20px 10px'} rounded={'20px'} variant='filled' placeholder='email address' type='text'/>
             <XButton width={'full'} title={'send'}/>
           </Stack>
         </Stack>

@@ -74,7 +74,7 @@ export default function Navbar() {
               <HStack as={'nav'} spacing={20} display={{ base: 'none', md: 'flex' }}>
                 {Links.map((link, i, links) => {
                   if(links.length - 1 === i){
-                     return <XButton title={link} />
+                     return <XButton title={link} url={'/donate'} />
                   }else{
                     return <NavLink key={link} index={i} link={link}/>
                   }
