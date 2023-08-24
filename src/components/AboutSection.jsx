@@ -51,7 +51,7 @@ const AboutSection = () => {
           </Box>
         </Box>
         <Box
-        marginLeft={{base: 0, md: '-30px'}}
+          marginLeft={{base: 0, md: '-30px'}}
           display="flex"
           flex="1"
           flexDirection="column"

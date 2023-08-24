@@ -1,24 +1,25 @@
 import React from 'react'
-import { Heading, Flex, Text, Box, OrderedList, ListItem } from '@chakra-ui/layout'
+import { Heading, Flex, Text, Box, OrderedList, ListItem, Grid } from '@chakra-ui/layout'
 import Image from 'next/image'
 import { aboutImg } from '@/assets'
+import { teams } from './data'
 
 const page = () => {
   return (
     <div>
       <Heading 
         textAlign='center' 
-        fontSize='48px'
-        mt='3rem'
+        fontSize={{ base: '32px', lg: '48px'}}
+        mt={{ base: '1.5rem', lg: '3rem'}}
         >About us</Heading>
 
         <Flex flexDir='column' p='2rem'>
 
           {/* ========== hero section =========  */}
-          <Flex gap={'1rem'} justify='center' align={'center'} mb='1.5rem' flexDir={{ base: 'column', lg: 'row'}}>
-            <Image src={aboutImg} alt='about us' style={{ width: '50%', borderRadius: '18px' }}  />
-            <Box w='50%'>
-              <Text fontWeight={'400'} color='#888'>NGC foundation was birthed in 2019 but became recognized and registered as a non-governmental organization in 2020 with the sole aim of reducing the educational barrier amongst children in local communities and orphanage homes, implementing feeding programs and sensitizing children on health matters as well as providing medical care.</Text>
+          <Flex gap={'1rem'} justify='center' align={'start'} mb='2.5rem' flexDir={{ base: 'column', lg: 'row'}}>
+            <Image src={aboutImg} alt='about us' className='about-img' />
+            <Box w={{ base: '100%', lg: '50%'}}>
+              <Text fontWeight={'400'} color='#888' mb='1.5rem'>NGC foundation was birthed in 2019 but became recognized and registered as a non-governmental organization in 2020 with the sole aim of reducing the educational barrier amongst children in local communities and orphanage homes, implementing feeding programs and sensitizing children on health matters as well as providing medical care.</Text>
               <Text fontWeight={'400'} color='#888'>Children are the leaders of tomorrow but this will just remain a statement if the children are not given an opportunity to develop, evolve, learn, relearn and be educated in a conducive environment with knowledgeable teachers in other to achieve great things in the society and extinguish the possibility of becoming a burden in the society.</Text>
             </Box>
           </Flex>
@@ -65,6 +66,25 @@ const page = () => {
             <ListItem>Carried out a cloth drive in a rural community.</ListItem>
           </OrderedList>
           <Text fontWeight={'400'} color='#888'>Our projects have been nothing but impactful with visible results.</Text>
+        </Flex>
+
+        <Flex flexDir={'column'} p={{ base: '3rem 1.2rem', lg: '4rem 2.5rem'}}>
+          <Heading 
+          textAlign='center' 
+          fontSize={{ base: '32px', lg: '48px'}}
+          my={{ base: '1.5rem', lg: '3rem'}}
+          >Our Team</Heading>
+
+          <Grid gridTemplateColumns={{ base: '1fr', lg: 'repeat(5, 1fr)'}} gap='2rem .8rem' placeItems={'center'}>
+            {teams.map((item, index) => (
+              <Box key={index} display={{ base: 'flex', lg: 'block' }} justifyContent='center' alignItems={'center'} flexDir={'column'}>
+                <Image src={item.img} alt={item.name} width={150} height={150} style={{ alignSelf: 'center', borderRadius: '50%' }} />
+                <Text fontSize={'20px'} fontWeight='600' mt='1rem' textTransform={'capitalize'}>{item.name}</Text>
+                <Text fontSize={'18px'} fontWeight='400' color='#888' textTransform={'capitalize'} >{item.designation}</Text>
+              </Box>
+            ))}
+          </Grid>
+
         </Flex>
     </div>
   )

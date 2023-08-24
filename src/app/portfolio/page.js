@@ -8,8 +8,8 @@ const page = () => {
     <div>
       <Heading 
       textAlign='center' 
-      fontSize='48px'
-      mt='3rem'
+      fontSize={{ base: '32px', lg: '48px'}}
+      my={{ base: '1.5rem', lg: '3rem'}}
       >Our Works</Heading>
 
       <Flex textAlign={'start'} py='2rem' flexDir={'column'} px='2rem'>
@@ -17,7 +17,7 @@ const page = () => {
 
         <Text fontWeight={'400'} color='#888'>Some of our projects that have been carried out over the years.</Text>
 
-        <Flex justify={'center'} align='center' flexDir={'column'} gap='2rem'>
+        <Flex justify={'center'} align='center' flexDir={'column'} gap={{ base: '1rem', lg: '2rem'}}>
           <div className="container">
             <div className="Box-A">
               <p className='text-content'>Provided substitute teachers for understaffed schools in Abia state.</p>
@@ -30,7 +30,7 @@ const page = () => {
             </div>
           </div>
 
-          <Flex gap='1rem' my='2rem' width={'100%'}>
+          <Flex gap='1rem' mb={{ base: '1rem', lg: '2rem'}} width={'100%'} flexDir={{ base: 'column', lg: 'row' }}>
             <div className='box__a'>
               <Text position={'absolute'} bottom='10px' left={'10px'}>Fed over 300 street kids in festac town lagos.</Text>
             </div>
@@ -39,9 +39,9 @@ const page = () => {
             </div>
           </Flex>
 
-          <Image src={banner} alt='banner image' width={'100%'} style={{ opacity: '' }} />
+          <Image src={banner} alt='banner image' className='banner-img' />
 
-          <Flex gap='1rem' my='2rem' width={'100%'}>
+          <Flex gap='1rem' mb={{ base: '1rem', lg: '2rem'}} width={'100%'} flexDir={{ base: 'column', lg: 'row' }}>
             <div className='img__wrapper-b'>
               <Text position={'absolute'} bottom='10px' left={'10px'}>Carried out a pad drive in a remote community with 3 months supply ffor each girl.</Text>
             </div>
