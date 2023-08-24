@@ -17,7 +17,7 @@ const CamCards = ({item, index}) => {
             <Box height={3} borderRadius={10} bg={'white'} width={'full'}>
               <Box borderRadius={10} height={'100%'} width={`${item.range}%`} bg={'#3ADC30'}></Box>
             </Box>
-            <Button margin={'0 auto'} variant='solid' bg='#3ADC30' width={'70%'} color={'#fff'} borderRadius={'20px'} height={'45px'}>Donate</Button>
+            <Button as={'a'} href='donate' margin={'0 auto'} variant='solid' bg='#3ADC30' width={'70%'} color={'#fff'} borderRadius={'20px'} height={'45px'}>Donate</Button>
           </Stack>
         </CardFooter>
   </Card>
