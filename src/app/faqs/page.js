@@ -24,8 +24,8 @@ const page = () => {
     <div>
       <Heading 
       textAlign='center' 
-      fontSize='48px'
-      mt='3rem'
+      fontSize={{ base: '32px', lg: '48px'}}
+      mt={{ base: '1.5rem', lg: '3rem'}}
       >FAQs</Heading>
 
       <Flex justify={'center'} align='center' flexDir={'column'} my='2.5rem' py='2rem' px='10px' >
@@ -39,7 +39,7 @@ const page = () => {
               <Box bg='#3ADC30' w={'20px'} h='20px' borderRadius={'50%'} />
   
               <Box>
-                <Text fontWeight={'600'}>{item.question}</Text>
+                <Text fontWeight={'600'} fontSize='17px'>{item.question}</Text>
                 <Text fontWeight='400' color='#6D6D6D' >{item.answer}</Text>
               </Box>
             </Flex>

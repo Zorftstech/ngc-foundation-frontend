@@ -27,7 +27,7 @@ export default function HeroBanner() {
             Creating real  <span style={{color: '#D60A87'}}>impact</span> in rural communities.
           </Text>
           <Stack direction={'row'}>
-            <XButton title={'Donate'}/>
+            <XButton url={'donate'} title={'Donate'} textTransform='uppercase'/>
           </Stack>
         </Stack>
       </VStack>

@@ -51,7 +51,7 @@ const AboutSection = () => {
           </Box>
         </Box>
         <Box
-        marginLeft={{base: 0, md: '-30px'}}
+          marginLeft={{base: 0, md: '-30px'}}
           display="flex"
           flex="1"
           flexDirection="column"
@@ -77,7 +77,7 @@ const AboutSection = () => {
             fontSize="lg">
               Children are the leaders of tomorrow but this will just remain a statement if the children are not given an opportunity to develop, evolve, learn, relearn and be educated in a conducive environment with knowledgeable teachers in other to achieve great things in the society and extinguish the possibility of becoming a burden in the society.
           </Text>
-          <XButton title={'Learn  more'}/>
+          <XButton title={'Learn  more'} url={'about'}/>
         </Box>
       </Box>
     </Container>
