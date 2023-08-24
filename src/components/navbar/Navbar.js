@@ -84,7 +84,7 @@ export default function Navbar() {
         </Container>
 
         {isOpen ? (
-          <Box  height={'92vh'} bg={'black'} zIndex={10} p={'20px 30px 0'} position={'fixed'} width={'100%'} display={{ md: 'none' }}>
+          <Box  height={'100vh'} zIndex={10} p={'20px 30px 0'} width={'100%'} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link, i) => (
                 <NavLink key={link} link={link} index={i}/>
