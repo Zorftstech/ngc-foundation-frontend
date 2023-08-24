@@ -22,6 +22,15 @@ import {
 import { FaCheckCircle } from 'react-icons/fa'
 import CamCards from './Cards'
 
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import { Pagination } from 'swiper/modules';
 
 const cardInfo = [
 	{
@@ -29,10 +38,13 @@ const cardInfo = [
 		range: 25
 	},
   {
-		title: 'Back to school project',
-		range: 25
+		title: 'Clean water project',
+		range: 15
 	},
-  
+  {
+		title: 'Feed a child project',
+		range: 8
+	},
 ]
 
 export default function Campaign() {
@@ -43,75 +55,39 @@ export default function Campaign() {
           Active Campaign
         </Heading>
       </VStack>
+
+      <Stack mt={10} display={{base: 'block', md: 'none'}}>
+          <Swiper
+            slidesPerView={'auto'}
+            spaceBetween={30}
+            // pagination={{
+            //   clickable: true,
+            // }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+              {
+                cardInfo.map((item, index) => (
+                  <SwiperSlide>
+                    <CamCards key={index} index={index} item={item}/>
+                  </SwiperSlide>
+                ))
+              }
+          </Swiper>
+      </Stack>
       <Stack
+        display={{base: 'none', md: 'flex'}}
         direction={{ base: 'column', md: 'row' }}
         textAlign="center"
         justify="center"
         spacing={{ base: 4, lg: 10 }}
         py={10}>
 
-          {/* {
+          {
             cardInfo.map((item, index) => (
-              <CamCards />
+              <CamCards key={index} index={index} item={item}/>
             ))
-          } */}
-
-        <Card transition={'all ease .5s'} 
-          _hover={{
-              transform: 'scale(1.05)'
-            }} height={'400px'} width={'33%'} className='boxCard' position={'relative'} rounded={'20px'} display={'flex'} justifyContent={'flex-end'}>
-              <Box transition={'all ease .5s'} width={'100%'} height={'100%'} position={'absolute'} borderRadius={'20px'} bg={'rgba(0,0,0,0.4)'}
-                _hover={{
-                  bg: 'rgba(0,0,0,0.6)'
-                }} zIndex={'1'}></Box>
-          <CardFooter position={'relative'} zIndex={3}>
-            <Stack width={'full'}>
-              <Text textAlign={'left'} color={'#fff'} fontSize={'16px'} fontWeight={'bold'}>Back to school project</Text>
-              <Box height={3} borderRadius={10} bg={'white'} width={'full'}>
-                <Box borderRadius={10} height={'100%'} width={'10%'} bg={'#3ADC30'}></Box>
-              </Box>
-              <Button margin={'0 auto'} variant='solid' bg='#3ADC30' width={'70%'} color={'#fff'} borderRadius={10} height={'45px'}>Donate</Button>
-            </Stack>
-          </CardFooter>
-        </Card>
-
-        <Card transition={'all ease .5s'} 
-          _hover={{
-              transform: 'scale(1.05)'
-            }} height={'400px'} width={'33%'} className='boxCard_1' position={'relative'} rounded={'20px'} display={'flex'} justifyContent={'flex-end'}>
-              <Box transition={'all ease .5s'} width={'100%'} height={'100%'} position={'absolute'} borderRadius={'20px'} bg={'rgba(0,0,0,0.4)'} 
-                _hover={{
-                bg: 'rgba(0,0,0,0.6)'
-              }} zIndex={'1'}></Box>
-              <CardFooter position={'relative'} zIndex={3}>
-                <Stack width={'full'}>
-                  <Text textAlign={'left'} color={'#fff'} fontSize={'16px'} fontWeight={'bold'}>Clean water project</Text>
-                  <Box height={3} borderRadius={10} bg={'white'} width={'full'}>
-                    <Box borderRadius={10} height={'100%'} width={'25%'} bg={'#3ADC30'}></Box>
-                  </Box>
-                  <Button margin={'0 auto'} variant='solid' bg='#3ADC30' width={'70%'} color={'#fff'} borderRadius={10} height={'45px'}>Donate</Button>
-                </Stack>
-              </CardFooter>
-        </Card>
-
-        <Card transition={'all ease .5s'} 
-          _hover={{
-              transform: 'scale(1.05)'
-            }} height={'400px'} width={'33%'} className='boxCard_2' position={'relative'} rounded={'20px'} display={'flex'} justifyContent={'flex-end'}>
-            <Box transition={'all ease .5s'} width={'100%'} height={'100%'} position={'absolute'} borderRadius={'20px'} bg={'rgba(0,0,0,0.4)'} 
-          _hover={{
-              bg: 'rgba(0,0,0,0.6)'
-            }} zIndex={'1'}></Box>
-              <CardFooter position={'relative'} zIndex={3}>
-                <Stack width={'full'}>
-                  <Text textAlign={'left'} color={'#fff'} fontSize={'16px'} fontWeight={'bold'}>Feed a child project</Text>
-                  <Box height={3} borderRadius={10} bg={'white'} width={'full'}>
-                    <Box borderRadius={10} height={'100%'} width={'13%'} bg={'#3ADC30'}></Box>
-                  </Box>
-                  <Button margin={'0 auto'} variant='solid' bg='#3ADC30' width={'70%'} color={'#fff'} borderRadius={10} height={'45px'}>Donate</Button>
-                </Stack>
-              </CardFooter>
-        </Card>
+          }
       </Stack>
     </Container>
   )
