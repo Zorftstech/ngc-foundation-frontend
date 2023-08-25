@@ -19,10 +19,10 @@ import Image from 'next/image';
 
 export default function Beneficiaries () {
   return (
-    <Stack mt={50} minH={'60vh'} direction={{ base: 'column', md: 'row' }} bg={'#D507860F'}>
+    <Stack mb={{base: '55px', md: '110px'}} minH={'60vh'} direction={{ base: 'column', md: 'row' }} bg={'#D507860F'}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={4} w={'full'} maxW={'2xl'}>
-					<Box>
+					<Box textAlign={{base: 'center'}}>
 	 					<Heading as={'h3'} fontSize={{base: '28px', md: '36px'}}>
 	 						See how we are making a difference in our<br/>
 	 						community.
@@ -47,34 +47,3 @@ export default function Beneficiaries () {
     </Stack>
   )
 }
-
-
-// import React from "react";
-// import Image from "next/image";
-// import Styles from "../components/styles.css";
-
-
-// const Beneficiaries = () => {
-// 	return (
-// 		<div className="container">
-// 			<div className="sec-container">
-// 				<div>
-// 					<h2>
-// 						See how we are making <br />a difference in our <br />
-// 						community.
-// 					</h2>
-// 					<p>
-// 						we have been making tremendeous difference in our <br /> community
-// 						and around our country
-// 					</p>
-// 					<a href="">Learn more</a>
-// 				</div>
-// 				<div>
-// 					<Image src={WomenImage} alt="" />
-// 				</div>
-// 			</div>
-// 		</div>
-// 	);
-// };
-
-// export default Beneficiaries;
