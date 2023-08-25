@@ -6,7 +6,7 @@ const CamCards = ({item, index}) => {
     <Card transition={'all ease .5s'} 
     _hover={{
         transform: 'scale(1.05)'
-      }} height={{base: '290px', md: '400px'}} width={{base: '100%', md: '33%'}} className={`boxCard_${index + 1}`} position={'relative'} rounded={'20px'} display={'flex'} justifyContent={'flex-end'}>
+      }} height={{base: '320px', md: '400px'}} width={{base: '100%', md: '33%'}} className={`boxCard_${index + 1}`} position={'relative'} rounded={'20px'} display={'flex'} justifyContent={'flex-end'}>
         <Box transition={'all ease .5s'} width={'100%'} height={'100%'} position={'absolute'} borderRadius={'20px'} bg={'rgba(0,0,0,0.4)'} 
           _hover={{
           bg: 'rgba(0,0,0,0.6)'

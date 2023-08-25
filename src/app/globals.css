@@ -239,11 +239,13 @@ select {
   background-image: url('https://s3-alpha-sig.figma.com/img/bb67/257d/d0eb6d35413610552c69997581ac0169?Expires=1693785600&Signature=Uu~FbdLYJYThqDf7FNRWso8WndhTd4LnOm5NDkctAn6v6FgNqbS1sFigIM7RdSf-2T~KzVwRURYterMx2ChBJZh8Q3Z-Wyn8YksPw2HBAIOiyoL-s12G7EqKIwaMY777pVo4-V2SWfT38x5tVZAPBWn9JvkR5NOQAr4Wtye4DzBaVOgkn-mhndLPHN959a~XbxNdg8DsTlkNuy4Jz2H2g5zo9RTxpN0-h3Wo7o82iFGqpmuiStiyac6idKjdHJUAc~LPQ2CrP~rhaM~o7xdLdHOr~bAxzPsFtlIZSWuCjM7Vg1WpZN3jwrhap~lpa6Rp5fHBW4TMCUkSgz16I6v4Qw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
   background-size: cover;
   object-fit: contain;
+  background-position: center;
 }
 .boxCard_2{
   background-image: url('https://s3-alpha-sig.figma.com/img/a826/44a9/0c9337ee2d90262f120c9f1d28d48e30?Expires=1693785600&Signature=UjG8a11otA4uYYbE-xuvVzKrsb-buMYjIF5zfFD2U3OOolarRp2-fSrIzaKL2QlhoAUS4Ww8kEqX6rEt7TOGGHc9Q5dn98OvkWCBVDERJ7W5ZKEz9uH5C8Pp30DkTshHQhrVC6o-3gmK33WlQ3Tb6OdRnK4RGNSegbskk1~scXWE8TvxI68XVHsD3sGkncOiT-X-w5MeS0sJFhCniQpCgyzLq0jlIClrCbePlAKAYlvMNc3pOdgU1r2A7yLjKtiPySvhUEIwsqjjzx1kpqLKf9Sb2EjORhBXc3Jpxcjqr0pWiouyZyndpSjEsoXJCRsZyQs-mGhtmIK9dee3CRrTNw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
   background-size: cover;
   object-fit: contain;
+  background-position: center;
 }
 
 .boxCard_3{
