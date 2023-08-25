@@ -9,18 +9,22 @@ const SdgsCard = ({arr, item, index}) => {
     _hover={{
         transform: 'scale(1.05)'
       }} alignSelf={{md: index == 0 ? 'flex-end' : index == arr?.length - 1 ? 'flex-start' : 'center'}} 
-      height={{base: '300px', md: '340px'}} 
+      // height={{base: '300px', md: '340px'}} 
       width={{base: '100%', md: '33%'}}
       bg={'transparent'} 
       border={'1px solid #D6D6D6'} 
-      position={'relative'} rounded={'20px'} 
+      position={'relative'} rounded={'30px'} 
       display={'flex'} 
       justifyContent={'center'}
       p={'40px 30px'}
       >
           <Stack width={'full'} alignItems={'center'}>
-            <Box bg={'#3ADC30'} width={'fit-content'} p={'20px'} rounded={'full'}>
-              <Image src={item.img}/>
+            <Box bg={'#3ADC30'} width={'fit-content'} p={{base: '13px', md: '20px'}} rounded={'full'}>
+              <Box width={{base: '57px', md: '80px'}}>
+                <Image style={{
+                  width: '100%'
+                }} src={item.img}/>
+              </Box>
             </Box>
             <Heading mt={'30px'}>{item.title}</Heading>
             <Text textAlign={'center'} color={'#888'} fontSize={'16px'}>{item.content}</Text>

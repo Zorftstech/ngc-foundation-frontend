@@ -63,7 +63,7 @@ function PriceWrapper(prop) {
 
 export default function Sdgs() {
   return (
-    <Container maxW={'1170px'} mt={20} py={12}>
+    <Container maxW={'1170px'} pb={{base: 4, md: 10}}>
         <Heading mb={{md: '-80px'}} as="h1" fontSize={{base: '30px', md: '48px'}} color={'#494949'}>
         Our SDG’s
         </Heading>

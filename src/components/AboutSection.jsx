@@ -20,7 +20,7 @@ import XButton from './tags/XButton'
 
 const AboutSection = () => {
   return (
-    <Container maxW={'1170px'} p={10}>
+    <Container maxW={'1170px'} mb={{base: '55px', md: '110px'}}>
       <Heading mt={'5%'} fontSize={{base: '28px', md: '46px'}} textAlign={'center'} as="h1">About us</Heading>
       <Box
         marginTop={{ base: '1', sm: '5%' }}
@@ -71,7 +71,7 @@ const AboutSection = () => {
             fontSize="16px">
               Children are the leaders of tomorrow but this will just remain a statement if the children are not given an opportunity to develop, evolve, learn, relearn and be educated in a conducive environment with knowledgeable teachers in other to achieve great things in the society and extinguish the possibility of becoming a burden in the society.
           </Text>
-          <XButton title={'Learn  more'} url={'about'}/>
+          <XButton variant={'secondary'} title={'Learn  more'} url={'about'}/>
         </Box>
       </Box>
     </Container>
