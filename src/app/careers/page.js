@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex, Text, Heading } from '@chakra-ui/react'
 import React from 'react'
 import Image from 'next/image'
 import { concept } from '@/assets/donate'
@@ -8,6 +8,12 @@ import { concept } from '@/assets/donate'
 const Careers = () => {
   return (
     <Box padding={'3rem 1rem'}>
+      <Heading 
+        textAlign='center' 
+        fontSize={{ base: '32px', lg: '48px'}}
+        mt={{ base: '1.5rem', lg: '3rem'}}
+        >Careers</Heading>
+
         <Box display={'flex'} justifyContent='center' alignItems={'center'} flexDir={{ base: 'column', lg: 'row' }} gap='1rem'>
             <Image src={concept} alt='Careers' />
 

@@ -23,8 +23,8 @@ import Logo from '../../assets/logo.png'
 import Image from 'next/image'
 import XButton from '../tags/XButton'
 
-const Links = ['About us', 'Our works', 'FAQs', 'Donate']
-const Navigate = ['about', 'portfolio', 'faqs', 'donate']
+const Links = ['About us', 'Our works', 'FAQs', 'Donate', 'Sponsors', 'Partners', 'Careers' ]
+const Navigate = ['about', 'portfolio', 'faqs', 'donate', 'partners', 'partners', 'careers' ]
 
 const NavLink = ({link, index}) => {
   // const { children, index } = props
