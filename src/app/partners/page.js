@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import { Heading } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
 
 const Partner = () => {
   return (
-    <>
+    <Box p='3rem 1rem'>
       <Heading 
         textAlign='center' 
         fontSize={{ base: '32px', lg: '48px'}}
@@ -22,7 +22,7 @@ const Partner = () => {
 
           <button className='donate-btn'>Send Message</button>
       </div>
-    </>
+    </Box>
   )
 }
 
