@@ -6,7 +6,7 @@ const BeneficialCard = ({arr, item, index}) => {
     <Card transition={'all ease .5s'} 
     _hover={{
         transform: 'scale(1.05)'
-      }} alignSelf={index == 0 ? 'flex-end' : index == arr?.length - 1 ? 'flex-start' : 'center'} height={'340px'} width={{base: '100%', md: '33%'}} className={`footerCard_${index + 1}`} position={'relative'} rounded={'20px'} display={'flex'} justifyContent={'flex-end'}>
+      }} alignSelf={index == 0 ? 'flex-end' : index == arr?.length - 1 ? 'flex-start' : 'center'} height={{base: '270px', md: '340px'}} width={{base: '100%', md: '33%'}} className={`footerCard_${index + 1}`} position={'relative'} rounded={'20px'} display={'flex'} justifyContent={'flex-end'}>
         <Box transition={'all ease .5s'} width={'100%'} height={'100%'} position={'absolute'} borderRadius={'20px'} bg={'rgba(0,0,0,0.4)'} 
           _hover={{
           bg: 'rgba(0,0,0,0.6)'

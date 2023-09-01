@@ -8,15 +8,7 @@ import {
   Text,
   VStack,
   useColorModeValue,
-  List,
-  ListItem,
-  ListIcon,
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  ButtonGroup,
-  Input,
+  Flex,
   Container
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
@@ -32,11 +24,24 @@ import 'swiper/css/pagination';
 
 import { Pagination } from 'swiper/modules';
 import SdgsCard from './SdgsCards';
+import { EduImg, FoodImg, HealthImg } from '@/assets';
 
 const cardList = [
-	'I have been owing for so many terms that it affected my studies, thanks to ngc foundation, they paid all my debt',
-	'We have both been affected by finances but a kind donor was able to come through for us through ngc foundation.',
-	'Taking care of my school fees has been difficult for my family but i am grateful that an ngo like this could help us.'
+  {
+    title: 'Quality Education',
+    content: 'We provide education in all forms to less privilege children in other to reduce the out of school children.',
+    img: EduImg
+  },
+  {
+    title: 'Health & well-being',
+    content: 'We provide healthcare for children and family in rural communities, this includes medical services as well.',
+    img: HealthImg
+  },
+  {
+    title: 'Zero hunger',
+    content: 'Our goal is to reduce the rate of children and families that go to bed hungry by providing food for them.',
+    img: FoodImg
+  }
 ]
 
 function PriceWrapper(prop) {
@@ -58,17 +63,18 @@ function PriceWrapper(prop) {
 
 export default function Sdgs() {
   return (
-    <Container maxW={'1170px'} mt={20} py={12}>
-        <Heading as="h1" fontSize={{base: '30px', md: '48px'}} color={'#494949'}>
-          Beneficiaries
+    <Container maxW={'1170px'} pb={{base: 4, md: 10}}>
+        <Heading mb={{md: '-80px'}} as="h1" fontSize={{base: '30px', md: '48px'}} color={'#494949'}>
+        Our SDG’s
         </Heading>
 
-      <Stack 
-        height={'600px'}
+      <Flex
+        height={{md: '600px'}}
         display={{ md: 'flex'}}
         direction={{ base: 'column', md: 'row' }}
         textAlign="center"
         justify="center"
+        gap={{base: 30}}
         spacing={{ base: 4, lg: 10 }}
         py={10}>
 					{
@@ -76,7 +82,7 @@ export default function Sdgs() {
 							<SdgsCard arr={items} item={item} index={index}/>
 						))
 					}
-      </Stack>
+      </Flex>
     </Container>
   )
 }

@@ -6,7 +6,8 @@ import XButton from './tags/XButton'
 export default function HeroBanner() {
   return (
     <Flex
-    className='banner'
+      mb={{base: '55px', md: '110px'}}
+      className='banner'
       w={'full'}
       h={'91vh'}
       backgroundImage={`url(${Banner})`}

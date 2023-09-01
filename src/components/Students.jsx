@@ -30,7 +30,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Pagination } from 'swiper/modules';
+import { Pagination, FreeMode } from 'swiper/modules';
 
 const cardList = [
 	'I have been owing for so many terms that it affected my studies, thanks to ngc foundation, they paid all my debt',
@@ -57,7 +57,7 @@ function PriceWrapper(prop) {
 
 export default function Campaign() {
   return (
-    <Container maxW={'1170px'} mt={20} py={12}>
+    <Container maxW={'1170px'} mb={{base: '55px', md: '110px'}}>
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize={{base: '30px', md: '48px'}} color={'#494949'}>
           Beneficiaries
@@ -67,11 +67,10 @@ export default function Campaign() {
       <Stack mt={10} display={{base: 'block', md: 'none'}}>
           <Swiper
             slidesPerView={'auto'}
-            spaceBetween={30}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination]}
+            spaceBetween={10}
+            loop={true}
+            freeMode={true}
+            modules={[Pagination, FreeMode]}
             className="mySwiper"
           >
               {
