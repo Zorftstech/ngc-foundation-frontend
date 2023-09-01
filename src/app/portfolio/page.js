@@ -9,10 +9,10 @@ const page = () => {
       <Heading 
       textAlign='center' 
       fontSize={{ base: '32px', lg: '48px'}}
-      my={{ base: '1.5rem', lg: '3rem'}}
+      my={{ base: '1rem', lg: '3rem'}}
       >Our Works</Heading>
 
-      <Flex textAlign={'start'} py='2rem' flexDir={'column'} px='2rem'>
+      <Flex textAlign={'start'} pb='2rem' flexDir={'column'} px='2rem'>
         <Text mb={'1rem'} fontWeight={'400'} color='#888'>Our targets are children in the very rural community in Nigeria, children who have little or nothing to eat and limited access to basic amenities. we are able to achieve our projects through consistent communication with community leaders, our community manager and other managers spend a lot of time going to these communities to source for beneficiaries as well. We have been able to make a tremendous impact in rural communities.</Text>
 
         <Text fontWeight={'400'} color='#888'>Some of our projects that have been carried out over the years.</Text>
@@ -30,7 +30,7 @@ const page = () => {
             </div>
           </div>
 
-          <Flex gap='1rem' mb={{ base: '1rem', lg: '2rem'}} width={'100%'} flexDir={{ base: 'column', lg: 'row' }}>
+          <Flex gap='1rem' mb={{ base: '0', lg: '2rem'}} width={'100%'} flexDir={{ base: 'column', lg: 'row' }}>
             <div className='box__a'>
               <Text position={'absolute'} bottom='10px' left={'10px'}>Fed over 300 street kids in festac town lagos.</Text>
             </div>

@@ -61,7 +61,7 @@ export default function Footer() {
             <Box as="a" href={'/partners'}>
               Partner
             </Box>
-            <Box as="a" href={'/sponsor'}>
+            <Box as="a" href={'/partners'}>
               Sponsor
             </Box>
           </Stack>

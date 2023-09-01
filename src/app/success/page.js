@@ -8,7 +8,7 @@ const page = () => {
     return (
         <>
             <Flex justifyContent={'center'} alignItems='center' flexDir={'column'} gap='2rem' py='2rem'>
-                <Image src={complete} alt='completed' width={400} />
+                <Image src={complete} alt='completed' width={300} />
                 <Text fontSize={'18px'} fontWeight='600'> Thank you for making a difference.😊</Text>
                 <Link href={'/'}>Back to Home</Link>
             </Flex>

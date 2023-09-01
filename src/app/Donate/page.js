@@ -19,10 +19,10 @@ const page = () => {
         flexDir={{ base: 'column', lg: 'row'}}>
         <Image src={children} alt='charity' className='donate-img' />
 
-        <div className='donate-container'>
+        <div className='donate-container' id='donate-form'>
           <h3 className='donate-title'>Donate</h3>
 
-          <input type={'text'} placeholder='Email address' className='donate-input' />
+          <input type={'email'} placeholder='Email address' className='donate-input' />
           <input type={'text'}  placeholder='Amount' className='donate-input' />
 
           <select placeholder='Currency'>
