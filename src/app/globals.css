@@ -209,6 +209,7 @@ textarea {
   .container {  
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    grid-gap: 0;
   }
   .box__a, .box__b, .img__wrapper-a, .img__wrapper-b {
     width: 100%;
@@ -216,7 +217,7 @@ textarea {
 
   .banner-img {
     width: 100%;
-    height: 300px;
+    height: 200px;
     filter: brightness(50%);
   }
   .about-img {
@@ -224,7 +225,14 @@ textarea {
   }
 
   .Box-A, .Box-B, .Box-C {
-    width: 350px;
+    width: 100%;
+  }
+
+  .donate_container {
+    background-image: url('../assets/donate/children.svg');
+    background-size: cover;
+    object-fit: contain;
+    background-position: center;
   }
 
   .donate-img {
@@ -233,6 +241,7 @@ textarea {
   .donate-container {
     width: 100%;
     align-self: center;
+    background: rgba(255, 255, 255, 0.44);
 
     margin: auto;
     scroll-margin-top: 50px;

@@ -57,11 +57,11 @@ const AboutSection = () => {
             as="p"
             marginTop="2"
             color={'#888888'}
-            fontSize="16px">
+            fontSize="16px"
+            mb={{base: 0, md: '20px'}}>
               NGC foundation was birthed in 2019 but became recognized and registered as a non-governmental organization in 2020 with the sole aim of reducing the educational barrier amongst children in local communities and orphanage homes, implementing feeding programs and sensitizing children on health matters as well as providing medical care.
           </Text>
-          <br />
-          <br />
+
           <Text
             noOfLines={{base: 4, md: 'unset'}}
             as="p"

@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { children } from '@/assets/donate'
@@ -7,37 +7,68 @@ import { Flex, Heading, Text } from '@chakra-ui/layout'
 import { ModalBody, useDisclosure } from '@chakra-ui/react'
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton } from '@chakra-ui/react';
 // import { Modak } from 'next/font/google'
+import axios from 'axios'
 
 const page = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const [data, setData] = useState({
+    email: '',
+    amount: '',
+    currency: ''
+  })
+
+
+    const initiatePayment = async () => {
+      try {
+        const response = await axios.post(
+          'https://api.paystack.co/transaction/initialize',
+          {
+            email: data.email,
+            amount: data.amount * 100, // Amount in kobo (100 kobo = 1 NGN)
+          },
+          {
+            headers: {
+              Authorization: `Bearer sk_test_e6390eb26696c6f8d485bf7430071cd32ab4660f`,
+            },
+          }
+        );
+  
+        // Redirect to Paystack's payment page
+        window.location.href = response.data.data.authorization_url;
+      } catch (error) {
+        console.error('Payment initiation failed:', error);
+      }
+    };
 
   return (
-    <div style={{ position: 'relative' }} >
-      <Flex my='2rem' py={'2rem'} 
+    <div style={{ position: 'relative' }}>
+      <Flex my={{base: '0', md: '2rem'}} py={'2rem'} 
+        className='donate_container'
         px={{ base: '1rem', lg: '0' }} 
-        justifyContent={'center'} alignItems='center' bg={'rgba(214, 10, 135, 0.04)'} 
+        justifyContent={'center'} alignItems='center' bg={{base: 'unset', md: 'rgba(214, 10, 135, 0.04)'}} 
         flexDir={{ base: 'column', lg: 'row'}}>
         <Image src={children} alt='charity' className='donate-img' />
 
         <div className='donate-container' id='donate-form'>
           <h3 className='donate-title'>Donate</h3>
+            <input style={{backgroundColor: '#fff'}} onChange={(e) => setData({...data, email: e.target.value})} value={data.email} required type={'email'} placeholder='Email address' className='donate-input' />
+            <input style={{backgroundColor: '#fff'}} onChange={(e) => setData({...data, amount: e.target.value})} value={data.amount} required type={'text'}  placeholder='Amount' className='donate-input' />
+            <select style={{backgroundColor: '#fff'}} onChange={(e) => setData({...data, currency: e.target.value})} placeholder='Currency'>
+              <option>Naira</option>
+              <option>Dollar</option>
+              <option selected>Pounds</option>
+            </select>
 
-          <input type={'email'} placeholder='Email address' className='donate-input' />
-          <input type={'text'}  placeholder='Amount' className='donate-input' />
-
-          <select placeholder='Currency'>
-            <option>Naira</option>
-            <option>Dollar</option>
-            <option>Pounds</option>
-          </select>
-
-          <button className='donate-btn' onClick={onOpen}>Donate</button>
+            {
+              data.email == '' ? <Text color={'red.800'}>pls kindly fill in all the required details</Text> : data.amount == '' ? <Text>pls kindly fill in all the required details</Text> : null
+            }
+            <button className='donate-btn' disabled={data.email == '' && data.amount && data .currency} onClick={data.email != '' && data.amount != '' ? onOpen : ''}>Donate</button>
         </div>
       </Flex>
 
-      <Modal onClose={onClose} isOpen={isOpen} isCentered p='1.5rem 2rem'>
+      <Modal onClose={onClose} isOpen={isOpen} isCentered p='5rem 2rem'>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent p={{base: '20px'}}>
           <ModalHeader textAlign={'center'}>Bank Transfer</ModalHeader>
           <ModalCloseButton />
           <ModalBody py='1.5rem'>
