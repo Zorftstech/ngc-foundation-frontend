@@ -71,7 +71,7 @@ export default function Navbar() {
               bg={"transparent"}
             />
 
-              <HStack as={'nav'} spacing={20} display={{ base: 'none', md: 'flex' }}>
+              <HStack as={'nav'} spacing={10} display={{ base: 'none', md: 'flex' }}>
                 {Links.map((link, i, links) => {
                   if(links.length - 1 === i){
                      return <XButton title={link} url={'/donate'} />
