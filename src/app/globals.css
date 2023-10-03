@@ -110,7 +110,8 @@ a {
 /* ========== donate page styling =========  */
 .donate-img {
   border-radius: 20px;
-  filter: brightness(50%);
+  filter: brightness(60%);
+  height: 60% !important;
 }
 .donate-container {
   background-color: #fff;
@@ -130,6 +131,11 @@ a {
   flex-direction: column;
   gap: 1rem;
 }
+
+.donate_container {
+  
+}
+
 .donate-title {
   font-size: 32px;
   font-weight: 600;
@@ -197,11 +203,12 @@ textarea {
   background-color: #3ADC30;
   color: #fff;
   border-radius: 30px;
-  padding: 18px 30px;
+  padding: 12px 30px;
   cursor: pointer;
   align-self: center;
   text-align: center;
-
+  margin-top: 5px;
+  font-weight: 600;
   width: 100%;
 }
 
@@ -256,41 +263,41 @@ textarea {
 }
 
 .boxCard_1{
-  background-image: url('https://s3-alpha-sig.figma.com/img/bb67/257d/d0eb6d35413610552c69997581ac0169?Expires=1693785600&Signature=Uu~FbdLYJYThqDf7FNRWso8WndhTd4LnOm5NDkctAn6v6FgNqbS1sFigIM7RdSf-2T~KzVwRURYterMx2ChBJZh8Q3Z-Wyn8YksPw2HBAIOiyoL-s12G7EqKIwaMY777pVo4-V2SWfT38x5tVZAPBWn9JvkR5NOQAr4Wtye4DzBaVOgkn-mhndLPHN959a~XbxNdg8DsTlkNuy4Jz2H2g5zo9RTxpN0-h3Wo7o82iFGqpmuiStiyac6idKjdHJUAc~LPQ2CrP~rhaM~o7xdLdHOr~bAxzPsFtlIZSWuCjM7Vg1WpZN3jwrhap~lpa6Rp5fHBW4TMCUkSgz16I6v4Qw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  background-image: url('../assets/boy.svg');
   background-size: cover;
   object-fit: contain;
   background-position: center;
 }
 .boxCard_2{
-  background-image: url('https://s3-alpha-sig.figma.com/img/a826/44a9/0c9337ee2d90262f120c9f1d28d48e30?Expires=1693785600&Signature=UjG8a11otA4uYYbE-xuvVzKrsb-buMYjIF5zfFD2U3OOolarRp2-fSrIzaKL2QlhoAUS4Ww8kEqX6rEt7TOGGHc9Q5dn98OvkWCBVDERJ7W5ZKEz9uH5C8Pp30DkTshHQhrVC6o-3gmK33WlQ3Tb6OdRnK4RGNSegbskk1~scXWE8TvxI68XVHsD3sGkncOiT-X-w5MeS0sJFhCniQpCgyzLq0jlIClrCbePlAKAYlvMNc3pOdgU1r2A7yLjKtiPySvhUEIwsqjjzx1kpqLKf9Sb2EjORhBXc3Jpxcjqr0pWiouyZyndpSjEsoXJCRsZyQs-mGhtmIK9dee3CRrTNw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  background-image: url('../assets/img2.svg');
   background-size: cover;
   object-fit: contain;
   background-position: center;
 }
 
 .boxCard_3{
-  background-image: url('https://s3-alpha-sig.figma.com/img/520a/5b5b/6bd0cf5a7c18aac033c673da7d3f44e4?Expires=1693785600&Signature=UBUQ2ypc~a-LV309L3E1W6nt5hSDDI5o2hv~kKUq5ACkqN4Zukf--HD3T~eOhffiWPkp1OkKeWjSRkswr1jl-B2CGZqaQjpcDj800iZP4FmXxB7R1X7vFypTMaKmBBB5BCSI8xaKJQu6~Z45ulMnc2OgNkkkEr-ONzlgwpJDIP99KclhSUnZ5vJtJK0kNQOlj7hbqpvZOQ9NnE1g22wG0CHUG6xxLQSpaKMh5FE87uul--keP~S8NbzmoBdqOz8du3Uub-hUrJvc3Yctbb33L0rUXNJ9VTCz42RXjTvKe8nnaU-WT6K6K6YA7wFAo6bdnORoKf74ANJ~M-xP5KwK~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  background-image: url('../assets/img3.svg');
   background-size: cover;
   object-fit: contain;
   background-position: center;
 }
 
 .footerCard_1{
-  background-image: url('https://s3-alpha-sig.figma.com/img/d60e/a13b/0da5bfe901d610d39665ef69dadd03d1?Expires=1693785600&Signature=ImeMhwpnuzuZOXFpNLvGVNvS5yA-z0W-vzDIi7nFpQz7bQsS4GjpY0i~y7bju5lfXsf4EH1oJobIDwG3dpc73gsSU5QSD4wQyACpjV4ki01NFEC6kAIUp6rZmg9XmHOrQCNxmSpvCBw4kmftpUvDl-rrO~qLzk7cCe5DmMwcTfT7PxRvGDgi4WvqONSPFwNGnnbPnmVmEEbxa8~I3ZCIUPFl-sV11xJRvkea4A~xSQ5PFjJNqQc2FJlowipsAh9x6iGelWvFZHlRCdlQSPqCqxn-DeHg8f1WxwZxdz1-dmkbDzyd1N5Cr6EkS88UCH5GYmgLo9~KW47XXe4nLfBjCg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  background-image: url('../assets/img5.svg');
   background-size: cover;
   object-fit: contain;
   background-position: center;
 }
 
 .footerCard_2{
-  background-image: url('https://s3-alpha-sig.figma.com/img/cc77/1807/547e899a495c01e6a8bdda7be760107f?Expires=1693785600&Signature=pBN~XuJ8Si6qkC3BIqA9tB1dGEo1yZlrdVxsOpg077orzCEnS-IqL9Jo27xcx0-nWD43inhUhDaQFF1yyRIQO2OmnIvoOioJKd-OI8NskLucRREeke-VJ6WZtiOO6yZDpMvB3tFEtUHvkNnUgUcH0866zGwS2KlcdAo1WFMvrsDyLiTBT89KCYUMR~tOxT4WB-DpxSS-rEqKNWuEc7wr0qkRm37slwee23MeAtbaKH9-YU7uK8MtVBcxTD9dW06f4TFK4fL4NvFEoHAG3KHjz6bfB-SmdNw2GKry5jCW013vaCbTV1wc2-8bclXD4LeBQLQjLn-KIKcdYqy8APmpTw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  background-image: url('../assets/img4.svg');
   background-size: cover;
   object-fit: contain;
   background-position: center;
 }
 
 .footerCard_3{
-  background-image: url('https://s3-alpha-sig.figma.com/img/bfa3/fd6a/7d3595d19f78935d7802b7b7ad4f6a2b?Expires=1693785600&Signature=QYZJyCXDD7YSDJVvBNFPrHbwBDInzJepghw60k7p85UDMI5U7MJ-vEsxriR79Bw-bYV9dhw-vlqdIFULwx~-CCZ73xdG3MLUHtl~JoAE1KPZuJtrWWop8EmP1FiOGaIIKcsFpBDC8FLIizZLtfu0k8eD-X6olnivVXuzXs8z5EKN9LUxiKjb4e0VG9nbvnSAaghIeOl028PNxaSgAKu7eWgP~HMYjUzH1s-B6udggIpnv5klkvPls0tF7eXa22GQzQkoSjU-10bkVTodaqZn-PdjbBcvmApTXGExxM7NVw6wXAPOz9UmsrgHrT4kzsCLjinC0UOo664Pg7-~7fw7Ag__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  background-image: url('../assets/img1.svg');
   background-size: cover;
   object-fit: contain;
   background-position: center;

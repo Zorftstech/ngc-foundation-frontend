@@ -31,19 +31,23 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { FreeMode, Pagination } from 'swiper/modules';
+import { Img1, Img2, Img3 } from '@/assets';
 
 const cardInfo = [
 	{
 		title: 'Back to school project',
-		range: 25
+		range: 25,
+    img: Img1
 	},
   {
 		title: 'Clean water project',
-		range: 15
+		range: 15,
+    img: Img2
 	},
   {
 		title: 'Feed a child project',
-		range: 8
+		range: 8,
+    img: Img3
 	},
 ]
 

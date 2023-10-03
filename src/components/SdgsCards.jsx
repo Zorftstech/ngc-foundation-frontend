@@ -5,10 +5,7 @@ import Image from 'next/image'
 const SdgsCard = ({arr, item, index}) => {
   return (
     <Card transition={'all ease .5s'} 
-    mb={{base: '25px'}}
-    _hover={{
-        transform: 'scale(1.05)'
-      }} alignSelf={{md: index == 0 ? 'flex-end' : index == arr?.length - 1 ? 'flex-start' : 'center'}} 
+    mb={{base: '25px'}} alignSelf={{md: index == 0 ? 'flex-end' : index == arr?.length - 1 ? 'flex-start' : 'center'}} 
       // height={{base: '300px', md: '340px'}} 
       width={{base: '100%', md: '33%'}}
       bg={'transparent'} 

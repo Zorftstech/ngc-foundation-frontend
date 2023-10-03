@@ -9,10 +9,10 @@ const XButton = ({ variant, width, url, title}) => {
         color={{base: variant ? '#3ADC30' : '#fff', md: '#fff'}} 
         bg={{base: variant ? 'transparent' : '#3ADC30', md: '#3ADC30'}} 
         border={{base: '1px solid #3ADC30'}} rounded={'full'} 
-        padding={{base: '20px 25px', md: '30px 40px'}}
+        padding={{base: '20px 25px', md: '25px 35px'}}
         cursor='pointer'
         fontSize={{base: '16px', md: '19px'}}
-        fontWeight={'400'}
+        fontWeight={'600'}
         _hover={{
           bg: '#3ABC10',
           transform: 'scale(1.05)'

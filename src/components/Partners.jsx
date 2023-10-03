@@ -38,7 +38,7 @@ export default function Partners() {
         rounded={'30px'} 
         p={{base: '40px', md: '50px 20px'}}  
         position={{base: 'absolute', md: 'absolute'}} 
-        right={{base: 0}} 
+        right={{base: 0, md: 'unset'}} 
         top={0} 
         height={'fit-content'} 
         margin={'auto'} 
@@ -52,8 +52,8 @@ export default function Partners() {
         >
           <Stack
             spacing={6}>
-              <Input p={{base: '20px 10px', md: '30px 10px'}} rounded={'20px'} variant='filled' placeholder='full name' type='text'/>
-              <Input p={{base: '20px 10px', md: '30px 10px'}} rounded={'20px'} variant='filled' placeholder='email address' type='text'/>
+              <Input p={{base: '20px 10px', md: '25px 10px'}} rounded={'20px'} variant='filled' placeholder='Full Name' type='text'/>
+              <Input p={{base: '20px 10px', md: '25px 10px'}} rounded={'20px'} variant='filled' placeholder='Email address' type='text'/>
             <XButton width={'full'} title={'send'}/>
           </Stack>
         </Stack>
