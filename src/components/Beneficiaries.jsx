@@ -22,7 +22,7 @@ export default function Beneficiaries () {
     <Stack mb={{base: '55px', md: '110px'}} minH={'60vh'} direction={{ base: 'column', md: 'row' }} bg={'#D507860F'}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={4} w={'full'} maxW={'2xl'}>
-					<Box textAlign={{base: 'center'}}>
+					<Box textAlign={{base: 'center', md: 'left'}}>
 	 					<Heading as={'h3'} fontSize={{base: '28px', md: '36px'}}>
 	 						See how we are making a difference in our<br/>
 	 						community.

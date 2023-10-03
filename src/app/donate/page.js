@@ -54,32 +54,27 @@ const page = () => {
             <input style={{backgroundColor: '#fff'}} onChange={(e) => setData({...data, email: e.target.value})} value={data.email} required type={'email'} placeholder='Email address' className='donate-input' />
             <input style={{backgroundColor: '#fff'}} onChange={(e) => setData({...data, amount: e.target.value})} value={data.amount} required type={'text'}  placeholder='Amount' className='donate-input' />
             <select style={{backgroundColor: '#fff'}} onChange={(e) => setData({...data, currency: e.target.value})} placeholder='Currency'>
-              <option>Naira</option>
-              <option>Dollar</option>
-              <option selected>Pounds</option>
+              <option selected>Naira</option>
             </select>
 
-            {
-              data.email == '' ? <Text color={'red.800'}>pls kindly fill in all the required details</Text> : data.amount == '' ? <Text>pls kindly fill in all the required details</Text> : null
-            }
             <button className='donate-btn' disabled={data.email == '' && data.amount && data .currency} onClick={data.email != '' && data.amount != '' ? onOpen : ''}>Donate</button>
         </div>
       </Flex>
 
-      <Modal onClose={onClose} isOpen={isOpen} isCentered p='5rem 2rem'>
+      <Modal size={{base: 'md', md: '2xl'}} onClose={onClose} isOpen={isOpen} isCentered p='5rem 2rem'>
         <ModalOverlay />
-        <ModalContent p={{base: '20px'}}>
+        <ModalContent p={{base: '10px', md: '20px'}}>
           <ModalHeader textAlign={'center'}>Bank Transfer</ModalHeader>
           <ModalCloseButton />
           <ModalBody py='1.5rem'>
-            <Text fontSize={'16px'} fontWeight='400'> Account Name</Text>
-            <Heading fontSize={'28px'} fontWeight='700' mb='2.5rem'>Ngozi children foundation</Heading>
+            <Text fontSize={{base: '14px', md: '16px'}} fontWeight='400'> Account Name</Text>
+            <Heading fontSize={{base: '18px', md: '26px'}} fontWeight='700' mb='2.5rem'>Ngozi children foundation</Heading>
 
-            <Text fontSize={'16px'} fontWeight='400'>Account Number</Text>
-            <Heading fontSize={'28px'} fontWeight='700' mb='2.5rem'>1012351571</Heading>
+            <Text fontSize={{base: '14px', md: '16px'}} fontWeight='400'>Account Number</Text>
+            <Heading fontSize={{base: '18px', md: '26px'}} fontWeight='700' mb='2.5rem'>1012351571</Heading>
 
-            <Text fontSize={'16px'} fontWeight='400'>Bank Name</Text>
-            <Heading fontSize={'28px'} fontWeight='700' mb='1.5rem'>Keystone Bank</Heading>
+            <Text fontSize={{base: '14px', md: '16px'}} fontWeight='400'>Bank Name</Text>
+            <Heading fontSize={{base: '18px', md: '26px'}} fontWeight='700' mb='1.5rem'>Keystone Bank</Heading>
 
             <Link href='/success' className='donate-link' >Done</Link>
           </ModalBody>
